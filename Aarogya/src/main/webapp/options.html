@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aarogya Members Portal</title>
+</head>
+<body>
+    <h1>Welcome to Aarogya Members Portal</h1>
+    <p>Select an option:</p>
+    
+    <select id="options" name="options">
+        <option value="options">Select an option</option>
+        <form action="view">
+        <option value="view.html">View list of all Aarogya Members</option></form>
+        <form action="searchbycontact">
+        <option value="searchbycontact.html">Search Aarogya member by Contact Number</option></form>
+        <form action="searchbycity">
+        <option value="searchbycity.html">Search Aarogya member by City</option></form>
+        <form action="searchbyage">
+        <option value="searchbyage.html">Search Aarogya member by Age Group</option></form>
+        <form action="add">
+        <option value="add.html">Add a new Aarogya Member</option></form>
+        <form action="delete">
+        <option value="delete.html">Delete an Aarogya Member</option></form>
+    </select>
+    <button onclick="selectOption()">Submit</button>
+    </form>
+    <script>
+        function selectOption() {
+            var selectElement = document.getElementById('options');
+            var selectedOption = selectElement.value;
+            if (selectedOption) {
+                window.location.href = selectedOption;
+            }
+        }
+    </script>
+</body>
+</html>
