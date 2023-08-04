@@ -55,8 +55,16 @@ public class DaoImpl implements DaoInterface{
 		session.close();
 		return e;
 	}
+  /*  
+	public Employee getsalaryRange(int min,max) {
+		Session session=sf.openSession();
+		
+		Employee e=session.get(Employee.class, i); 
+		session.close();
+		return e;
+	}
 
-
+*/
 
 	@Override
 	public List<Employee> viewAllEmployee() {

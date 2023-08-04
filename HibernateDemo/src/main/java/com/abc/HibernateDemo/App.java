@@ -15,49 +15,49 @@ public class App
     DaoInterface dao=new DaoImpl();
     public void addEmployee() {
         Employee e=new Employee();
-        System.out.println("Enter Id");
+        System.out.println("enter id");
         int id=s.nextInt();
         e.setId(id);
-        System.out.println("Enter Name");
+        System.out.println("enter name");
         String nam=s.next();
         e.setEname(nam);
-        System.out.println("Enter City");
+        System.out.println("enter city");
         String city=s.next();
         e.setCity(city);
-        System.out.println("Enter Email");
+        System.out.println("enter email");
         String email=s.next();
         e.setEmail(email);
-        System.out.println("Enter salary");
+        System.out.println("enter salary");
         double sal=s.nextDouble();
         e.setSalary(sal);
         dao.addEmployee(e);
     }
     public void deleteEmp()
     {
-    	System.out.println("Enter id");
+    	System.out.println("enter id");
     	dao.deleteEmp(s.nextInt());
     }
     public void getEmployeeById()
     {
-    	System.out.println("Enter id");
+    	System.out.println("enter id");
     	int id=s.nextInt();
     	Employee e=dao.getEmployeeById(id);
-    	System.out.println("Employee id : "+e.getId());
-    	System.out.println("Employee Name : "+e.getEname());
-    	System.out.println("Employee City : "+e.getCity());
-    	System.out.println("Employee Salary : "+e.getSalary());
-    	System.out.println("Emloyee Email : "+e.getEmail());
+    	System.out.println("emp id : "+e.getId());
+    	System.out.println("emp Name : "+e.getEname());
+    	System.out.println("emp City : "+e.getCity());
+    	System.out.println("emp Salary : "+e.getSalary());
+    	System.out.println("emp Email : "+e.getEmail());
     }
     public void viewAllEmployee()
     {
     	List<Employee> list=dao.viewAllEmployee();
     	for(Employee each:list)
     	{
-    		System.out.println("Employee id : "+each.getId());
-        	System.out.println("Employee Name : "+each.getEname());
-        	System.out.println("Employee City : "+each.getCity());
-        	System.out.println("Employee Salary : "+each.getSalary());
-        	System.out.println("Emloyee Email : "+each.getEmail());
+    		System.out.println("emp id : "+each.getId());
+        	System.out.println("emp Name : "+each.getEname());
+        	System.out.println("emp City : "+each.getCity());
+        	System.out.println("emp Salary : "+each.getSalary());
+        	System.out.println("emp Email : "+each.getEmail());
     	}
     }
     public static void main( String[] args )
@@ -67,10 +67,10 @@ public class App
          
          while(true)
          {
-         	System.out.println("1. Add Emp");
-         	System.out.println("2. Delete Emp");
-         	System.out.println("3. View all Emp");
-         	System.out.println("4. View Emp by ID");
+         	System.out.println("1. Add emp");
+         	System.out.println("2. Delete emp");
+         	System.out.println("3. View all emp");
+         	System.out.println("4. View emp using ID");
          	System.out.println("5. Exit");
          	int option=obj.s.nextInt();
          	if(option==1) {
